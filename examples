@@ -1,0 +1,2 @@
+Download very simple site and pack it into tar.gz archive without removing folder:
+    dl http://verysimplesites.co.uk/ 0 gz
