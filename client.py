@@ -9,6 +9,6 @@ import config
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((config.host, config.port))
 sock.sendall(bytes(input(), encoding="utf-8"))
-data = sock.recv(1024)
+data = sock.recv(10240)
 sock.close()
-print('Response:', data.decode("utf-8"))
+print(data.decode("utf-8"))
