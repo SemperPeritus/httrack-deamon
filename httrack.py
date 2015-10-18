@@ -29,9 +29,11 @@ def download(url, remove, archive_format):
             call(["tar", "-cf", config.sites_directory + '/' + url + ".tar",
                   "-C", config.sites_directory, url], cwd=config.sites_directory)
         else:
-            print("Packing is CANCELED")
+            print("Archive format is wrong")
+    else:
+        print("The site is not packed")
     if remove:
         rmtree(site)
         print("Removing is complete")
     else:
-        print("Removing is CANCELED")
+        print("Removing is canceled")
